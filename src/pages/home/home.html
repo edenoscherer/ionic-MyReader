@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Feed Reader</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let feed of feeds" (click)="itemSelected(feed.data.url)">
+      <ion-thumbnail item-left>
+        <img [src]="feed.data.thumbnail">
+      </ion-thumbnail>
+      <h2>{{feed.data.title}}</h2>
+      <p>{{feed.data.domain}}</p>
+    </button>
+  </ion-list>
+</ion-content>
